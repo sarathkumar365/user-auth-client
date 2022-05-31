@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dancing+Script:wght@700&family=Poppins:wght@300&display=swap');
+
+:root {
+  --gradient: linear-gradient(130deg, #ee6352, purple, #ee6352);
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  background-repeat: no-repeat;
+
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 14s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.main {
+  height: 100%;
+  display: flex;
+
+  /* display: none; */
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2 {
+  line-height: 90px;
+}
+
+.tagline h2 {
+  margin: 0;
+
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 95px;
+  color: #fff;
+}
+
+.intro {
+  margin-top: -200px;
+}
+.auth h1 {
+  margin: 0;
+
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 95px;
+  color: #fff;
+}
+
+.auth h1 > span {
+  margin-left: -215px;
+  letter-spacing: 42px;
+}
+
+.message p {
+  margin-left: -37px;
+
+  font-family: 'Poppins';
+  font-weight: medium;
+  font-size: 21px;
+  color: #fff;
+}
+
+.message span {
+  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Inspiration', cursive; */
+  font-weight: bold;
+  font-size: 55px;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  /* background-color: red; */
+
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+
+  mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  mask-size: 200%;
+  animation: shine 3s linear infinite;
+}
+
+.form {
+  height: 700px;
+  width: 602px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  background: rgba(221, 212, 212, 0.389);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+  border: 1px solid rgba(200, 188, 188, 0.3);
+}
+
+.form > input[type='text'] {
+  padding: 10px 15px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.form > input[type='text']:focus {
+  /* outline-color: #ee6352; */
+  outline-color: hsla(7, 82%, 63%, 0.75);
+  /* outline: none; */
+}
+
+.names {
+  width: 86%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+.names > .first,
+.last {
+  /* height: 100px;
+  width: 500px; */
+  /* width: 50%; */
+  color: white;
+  font-weight: medium;
+  font-size: 22px;
+  font-family: Poppins;
+}
+
+input {
+  border: none;
+}
+.names input[type='text'] {
+  width: 250px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.passwords {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.password1,
+.password2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.passwords > .password1,
+.password2 {
+  color: white;
+  font-weight: medium;
+  font-size: 22px;
+  font-family: Poppins;
+}
+
+.passwords input[type='text'] {
+  width: 514px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.ag {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 33px;
+}
+
+.ag > .age,
+.gender {
+  color: white;
+  font-weight: medium;
+  font-size: 22px;
+  font-family: Poppins;
+}
+
+.age {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.ag input[type='text'] {
+  width: 240px;
+  height: 45px;
+  border-radius: 5px;
+}
+select {
+  border: none;
+  background: white;
+}
+#gender {
+  font-family: poppins;
+  font-size: 18px;
+}
+select > option {
+  font-size: 18px;
+}
+.ag select {
+  width: 240px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+input[type='text'] {
+  font-size: 25px;
+  font-weight: 300px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile,
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.info > .mobile,
+.email {
+  color: white;
+  font-weight: medium;
+  font-size: 22px;
+  font-family: Poppins;
+}
+
+.info input[type='text'] {
+  width: 514px;
+  height: 45px;
+  border-radius: 5px;
+}
+.submit > button {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+
+  color: #fff;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  font-size: 17px;
+
+  background-color: rgba(255, 255, 255, 0.24);
+
+  transition: background-image 5s ease-in;
+}
+
+.submit > button:hover {
+  cursor: pointer;
+  background-image: var(--gradient);
+  background-size: 200%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.home {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 65px;
+  letter-spacing: 8px;
+  color: #fff;
+}
+.tagline > p > span {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px;
+}
+
+.tagline > p {
+  margin: 0;
+}
+
+.bttns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sign {
+  width: 155px;
+  height: 45px;
+
+  font-size: 20px;
+  /* color: white; */
+  font-weight: bold;
+
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+
+  transition: box-shadow 0.6s ease, background 0.6s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.bttns > button:hover {
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 1.95px solid white;
+}
+
+.fadeinTop {
+  animation: fadeinTop 1s ease-in-out;
+}
+.fadeinLeft {
+  animation: fadeinLeft 1s ease-in-out;
+}
+.fadeinRight {
+  animation: fadeinRight 1s ease-in-out;
+}
+
+@keyframes fadeinTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeinLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeinRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#alertBox {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alertMsg {
+  width: 615px;
+  height: 270px;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+  border-color: purple;
+}
+
+.alertMsg > p {
+  font-family: poppins;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.login {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.loginBox > p {
+  margin: 0;
+  /* margin-left: 100px; */
+
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: poppins;
+}
+
+.inp-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.logEmail,
+.pass {
+  border-radius: 4px;
+}
+
+.inp-boxes > input[type='text'] {
+  padding: 10px 15px;
+  margin: 4px 0;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  /* background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white; */
+
+  outline: none;
+}
+
+.loginBox > button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  font-size: 18px;
+  font-family: poppins;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: white;
+
+  width: 120px;
+  height: 35px;
+  /* border: 1px solid white; */
+  border-radius: 4px;
+
+  cursor: pointer;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  transition: background-color 0.4s ease;
+}
+
+.loginBox > button:hover {
+  background-color: transparent;
+}
+.loginBox > p > span {
+  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Inspiration', cursive; */
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* ============================== ABOUT PAGE =================================== */
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  width: 1350px;
+  height: 700px;
+
+  background-color: #dde1e7;
+
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.welcome,
+.details {
+  height: 200px;
+  width: 100%;
+
+  /* margin-top: 4px; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome > h2 {
+  font-family: poppins;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.welcome > h2 > span {
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.welcomeText {
+  font-family: poppins;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.userName {
+  font-family: poppins;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.nameBox,
+.emailBox,
+.mobileBox {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.nameBox > p {
+  width: 400px;
+}
+.emailBox > p {
+  width: 400px;
+}
+.mobileBox > p {
+  width: 400px;
+}
+
+.actionBtns {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionBtns > button {
+  width: 150px;
+  height: 40px;
+
+  border: 0px solid transparent;
+  border-radius: 5px;
+
+  color: purple;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  /* background-color: purple; */
+  background-color: transparent;
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  /* box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px #6d676773; */
+
+  transition: all 0.3s ease-in-out;
+}
+
+.actionBtns > button:hover {
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================== LOADER ANIMATION ====================================== */
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(to right, silver, teal); */
+  background: var(--gradient);
+}
+
+.loader {
+  width: 16em;
+  height: 8em;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+
+.loader::before {
+  width: inherit;
+  height: 0.2em;
+  background-color: hsla(0, 0%, 85%);
+}
+
+.loader::after {
+  box-sizing: border-box;
+  width: 50%;
+  height: inherit;
+  border: 0.2em solid hsla(0, 0%, 85%);
+  border-radius: 50%;
+  left: 25%;
+}
+
+.loader span {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 0.2em;
+  left: -5%;
+  animation: 2s linear infinite;
+  transform-origin: 50% -3em;
+  animation-name: run, rotating;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.075s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+@keyframes run {
+  0% {
+    left: -5%;
+  }
+  10%,
+  60% {
+    left: calc((100% - 5%) / 2);
+  }
+  70%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes rotating {
+  0%,
+  10% {
+    transform: rotate(0deg);
+  }
+  60%,
+  100% {
+    transform: rotate(-1turn);
+  }
+}
