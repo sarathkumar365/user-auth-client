@@ -87,6 +87,7 @@ export const getUser = async () => {
 export const logout = async () => {
   const res = await axios.get(`${url}/logout`);
   console.log('api logout');
+  console.log(res);
 
   if (res.status === 200) {
     location.reload();
