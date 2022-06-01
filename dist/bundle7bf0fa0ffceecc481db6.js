@@ -2491,8 +2491,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 (axios__WEBPACK_IMPORTED_MODULE_0___default().defaults.withCredentials) = true;
-var url = 'http://127.0.0.1:5555/auth/';
-var url2 = 'http://localhost:5555/auth/';
+var url = 'https://vast-headland-00795.herokuapp.com/auth/';
 function sendData() {
   return _sendData.apply(this, arguments);
 }
@@ -2569,7 +2568,7 @@ var login = /*#__PURE__*/function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log('login!!!');
+            // console.log('login!!!');
             email = document.getElementById('logEmail').value;
             password = document.getElementById('pass').value;
             data = {
@@ -2578,11 +2577,11 @@ var login = /*#__PURE__*/function () {
             }; // console.log(data);
             // const cookieOptions = { withCredentials: true };
 
-            _context.prev = 4;
-            _context.next = 7;
-            return axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat(url2, "/login"), data);
+            _context.prev = 3;
+            _context.next = 6;
+            return axios__WEBPACK_IMPORTED_MODULE_0___default().post("".concat(url, "/login"), data);
 
-          case 7:
+          case 6:
             res = _context.sent;
             // console.log(res);
             msg = "Login sucessful \uD83C\uDF77 ";
@@ -2591,9 +2590,9 @@ var login = /*#__PURE__*/function () {
               status: true
             });
 
-          case 12:
-            _context.prev = 12;
-            _context.t0 = _context["catch"](4);
+          case 11:
+            _context.prev = 11;
+            _context.t0 = _context["catch"](3);
             console.log('ERROR in login 🔴');
             console.log(_context.t0);
             _msg = "Oops!!! ".concat(_context.t0.response.data.message, " \uD83D\uDEAB \uD83D\uDEAB");
@@ -2602,12 +2601,12 @@ var login = /*#__PURE__*/function () {
               status: false
             });
 
-          case 18:
+          case 17:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[4, 12]]);
+    }, _callee, null, [[3, 11]]);
   }));
 
   return function login() {
@@ -2621,12 +2620,11 @@ var getUser = /*#__PURE__*/function () {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            console.log('user getting ....');
-            _context2.prev = 1;
-            _context2.next = 4;
-            return axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat(url2, "/user"));
+            _context2.prev = 0;
+            _context2.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat(url, "/user"));
 
-          case 4:
+          case 3:
             res = _context2.sent;
             user = res.data.data; // console.log(user);
 
@@ -2635,17 +2633,16 @@ var getUser = /*#__PURE__*/function () {
               status: true
             });
 
-          case 9:
-            _context2.prev = 9;
-            _context2.t0 = _context2["catch"](1);
-            console.log('ERROR in login 🔴'); // console.log(err.response.data.message);
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](0);
 
-          case 12:
+          case 10:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, null, [[1, 9]]);
+    }, _callee2, null, [[0, 8]]);
   }));
 
   return function getUser() {
@@ -2660,13 +2657,12 @@ var logout = /*#__PURE__*/function () {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat(url2, "/logout"));
+            return axios__WEBPACK_IMPORTED_MODULE_0___default().get("".concat(url, "/logout"));
 
           case 2:
             res = _context3.sent;
 
-            // console.log(res);
-            if (res.status === 200) {
+            if (res.status === 204) {
               location.reload();
             }
 
@@ -29149,4 +29145,4 @@ if (false) {}
 
 /******/ })()
 ;
-//# sourceMappingURL=bundled41d84eca81590b9f842.js.map
+//# sourceMappingURL=bundle7bf0fa0ffceecc481db6.js.map
