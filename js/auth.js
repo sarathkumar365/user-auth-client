@@ -71,7 +71,7 @@ export const login = async () => {
 };
 
 export const getUser = async () => {
-  console.log('user getting ....');
+  // console.log('user getting ....');
   try {
     // const res = await axios.post('http://127.0.0.1:5555/auth/login', data);
     const res = await axios.get(`${url}/user`);
@@ -86,7 +86,7 @@ export const getUser = async () => {
 
 export const logout = async () => {
   const res = await axios.get(`${url}/logout`);
-  // console.log(res);
+  console.log('api logout');
 
   if (res.status === 200) {
     location.reload();
