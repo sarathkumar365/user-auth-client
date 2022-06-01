@@ -2,7 +2,7 @@ import axios from 'axios';
 import { async } from 'regenerator-runtime';
 axios.defaults.withCredentials = true;
 
-const url = 'https://vast-headland-00795.herokuapp.com//auth/';
+const url = 'https://vast-headland-00795.herokuapp.com/auth/';
 
 export async function sendData() {
   // console.log('data SENT!!!');
